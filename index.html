@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gestor de Despesas Pessoais</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="theme-light">
+  
+  <header class="app-header">
+    <div class="header-content">
+      <div class="brand">
+        <span class="logo-icon">💸</span>
+        <div>
+          <h1>Gestor de Despesas</h1>
+          <small class="tagline">As tuas finanças sob controle</small>
+        </div>
+      </div>
+
+      <div class="header-controls">
+        <div class="datetime" id="horaDataLocal"></div>
+        <button id="themeToggle" class="btn-icon" aria-label="Alternar tema">
+          🌗
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <aside>
+      <section class="panel form-panel">
+        <header class="panel-header">
+          <h2>➕ Nova Despesa</h2>
+        </header>
+
+        <form id="expenseForm" novalidate>
+          <div class="form-row">
+            <label for="description">Descrição</label>
+            <input id="description" name="description" type="text" placeholder="Ex: Jantar, Gasolina..." maxlength="100" required />
+          </div>
+
+          <div class="form-row">
+            <label for="amount">Valor (€)</label>
+            <input id="amount" name="amount" type="number" step="0.01" min="0" placeholder="0.00" required />
+          </div>
+
+          <div class="form-row">
+            <label for="category">Categoria</label>
+            <select id="category" name="category" required>
+              <option value="" disabled selected>Selecionar...</option>
+              <option value="alimentação">🍔 Alimentação</option>
+              <option value="transportes">🚌 Transportes</option>
+              <option value="lazer">🎉 Lazer</option>
+              <option value="saúde">💊 Saúde</option>
+              <option value="educação">📚 Educação</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Adicionar Despesa</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel api-panel" id="apiInfoSection">
+        <div class="api-header">
+          <h3>💡 Inspiração do Dia</h3>
+          <button id="carregarFrase" class="btn-mini" title="Nova frase">🔄</button>
+        </div>
+        <div id="apiInfo" class="api-content">
+          <p id="frase">"Clique no botão para carregar uma frase..."</p>
+          <small id="autor-frase"></small>
+        </div>
+      </section>
+    </aside>
+
+    <section class="panel list-panel">
+      <header class="panel-header list-header">
+        <h2>📋 Histórico</h2>
+        
+        <div class="controls">
+           <select id="filterCategory" class="filter-select">
+            <option value="todas">Todas as categorias</option>
+            <option value="alimentação">Alimentação</option>
+            <option value="transportes">Transportes</option>
+            <option value="lazer">Lazer</option>
+            <option value="saúde">Saúde</option>
+            <option value="educação">Educação</option>
+          </select>
+        </div>
+      </header>
+
+      <div class="total-card">
+        <span>Total Gasto</span>
+        <strong id="totalAmount">€0.00</strong>
+      </div>
+
+      <ul id="expenseList" class="expense-list"></ul>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <small>&copy; <span id="year">2025</span> Gestor de Despesas Pessoais</small>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
