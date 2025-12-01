@@ -9,10 +9,6 @@
 
 ---
 
-## 🔗 [Ver Projeto Online (Demo)](https://)
-
----
-
 ## 📋 Sobre o Projeto
 
 Este projeto tem como objetivo criar uma ferramenta simples e intuitiva para registo e gestão de despesas diárias. Foca-se na manipulação dinâmica do DOM, uso de APIs externas e persistência de dados durante a sessão.
