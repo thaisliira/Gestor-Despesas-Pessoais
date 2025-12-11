@@ -33,7 +33,7 @@ A aplicação permite ao utilizador ter uma visão clara dos seus gastos, filtra
 * **Fetch API:** Consumo de dados externos (JSON).
 * **DOM Manipulation:** Criação e renderização dinâmica de elementos HTML.
 
-## LIVE🔴 DEMO
+## 🔴 LIVE DEMO
 * https://thaisliira.github.io/Gestor-Despesas-Pessoais/
 
 ## 🔮 Melhorias Futuras
