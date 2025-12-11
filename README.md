@@ -46,4 +46,4 @@ A aplicação permite ao utilizador ter uma visão clara dos seus gastos, filtra
 [ ] Sistema de Login para múltiplos utilizadores.
 
 ## 👨‍💻 Autor
-Desenvolvido por Thaís Lira como parte da formação de Software Development no CESAE Digital.
+Desenvolvido por Thaís Lira
